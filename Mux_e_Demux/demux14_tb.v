@@ -6,7 +6,7 @@ module tb_demux_1x4;
     wire Y0, Y1, Y2, Y3; // Saídas do DEMUX
 
     // Instancia o DEMUX 1x4 (assume um módulo demux_1x4 já definido)
-    demux_1x4 uut (
+    demux14 uut (
         .D(D), 
         .S1(S1), .S0(S0),
         .Y0(Y0), .Y1(Y1), .Y2(Y2), .Y3(Y3)
