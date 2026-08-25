@@ -6,7 +6,7 @@ module tb_mux_4x1;
     wire Y;         // Saída do MUX
 
     // Instancia o MUX 4x1 (assume que já existe um módulo mux_4x1)
-    mux_4x1 uut (
+    mux41 uut (
         .D(D),
         .S(S),
         .Y(Y)
