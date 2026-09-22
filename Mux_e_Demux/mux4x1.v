@@ -1,4 +1,4 @@
-module mux41 (
+module mux4x1 (
     input [3:0] D,
     input [1:0] S,
     output Y
