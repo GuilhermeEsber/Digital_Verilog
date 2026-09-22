@@ -1,12 +1,12 @@
 `timescale 1ns / 100ps
 
-module demux14_tb;
+module demux1x4_tb;
     reg D;        // Entrada do DEMUX
     reg S1, S0;   // Seletores
     wire Y0, Y1, Y2, Y3; // Saídas do DEMUX
 
     // Instancia o DEMUX 1x4 (assume um módulo demux_1x4 já definido)
-    demux14 uut (
+    demux1x4 uut (
         .D(D), 
         .S1(S1), .S0(S0),
         .Y0(Y0), .Y1(Y1), .Y2(Y2), .Y3(Y3)
