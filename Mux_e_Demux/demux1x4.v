@@ -1,4 +1,4 @@
-module demux14 (
+module demux1x4 (
     input D,
     input S1,
     input S0,
