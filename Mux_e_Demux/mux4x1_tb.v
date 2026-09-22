@@ -1,12 +1,12 @@
 `timescale 1ns / 100ps
 
-module mux41_tb;
+module mux4x1_tb;
     reg [3:0] D;    // Vetor de entradas (4 bits)
     reg [1:0] S;    // Vetor de seleção (2 bits)
     wire Y;         // Saída do MUX
 
     // Instancia o MUX 4x1 (assume que já existe um módulo mux_4x1)
-    mux41 uut (
+    mux4x1 uut (
         .D(D),
         .S(S),
         .Y(Y)
