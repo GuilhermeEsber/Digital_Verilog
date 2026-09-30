@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module deslocador_universal_TB;
+module deslocador_universal_tb;
     // Parâmetro do tamanho do deslocador
     parameter size = 4;
 
