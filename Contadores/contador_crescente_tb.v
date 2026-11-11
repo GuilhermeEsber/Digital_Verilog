@@ -6,7 +6,7 @@ module contador_crescente_tb;
     wire [3:0] XYZW;
 
     // Instancia o contador_crescente
-    contador_aritimetico_crescente uut (
+    contador_crescente uut (
         .clk(clk),
         .rst(rst),
         .XYZW(XYZW)
