@@ -1,4 +1,4 @@
-module contador_aritimetico_crescente (
+module contador_crescente (
     input clk, rst,
     output reg [3:0] XYZW
 );
