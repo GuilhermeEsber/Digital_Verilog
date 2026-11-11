@@ -1,12 +1,12 @@
 `timescale 1ns / 100ps
 
-module contador_aritimetico_crescente_sincrono_tb;
+module contador_aritimetico_crescente_tb;
 
     reg clk, rst;
     wire [3:0] XYZW;
 
-    // Instancia o contador_aritimetico_crescente_sincrono
-    contador_aritimetico_crescente_sincrono uut (
+    // Instancia o contador_aritimetico_crescente
+    contador_aritimetico_crescente uut (
         .clk(clk),
         .rst(rst),
         .XYZW(XYZW)
