@@ -1,5 +1,5 @@
 
-module maq_moore1101_tb;
+module detector_sequencia_1101_tb;
 
     reg clk;
     reg rst;
@@ -7,7 +7,7 @@ module maq_moore1101_tb;
     wire out;
 
     // Instanciação do módulo sob teste
-    maq_moore1101 dut (
+    detector_sequencia_1101 dut (
         .clk(clk),
         .rst(rst),
         .bit_entrada(in),
