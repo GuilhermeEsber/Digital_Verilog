@@ -1,12 +1,12 @@
 `timescale 1ns / 100ps
 
-module contador_condicional_sincrono_tb;
+module contador_condicional_tb;
 
     reg clk, rst;
     wire [3:0] XYZW;
 
-    // Instancia o contador_condicional_sincrono
-    contador_condicional_sincrono uut (
+    // Instancia o contador_condicional
+    contador_condicional uut (
         .clk(clk),
         .rst(rst),
         .XYZW(XYZW)
