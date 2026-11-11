@@ -1,5 +1,5 @@
 
-module maq_moore1101 (clk, bit_entrada, rst, bit_saida);
+module detector_sequencia_1101 (clk, bit_entrada, rst, bit_saida);
 
 input wire clk, bit_entrada, rst;
 output reg bit_saida;
