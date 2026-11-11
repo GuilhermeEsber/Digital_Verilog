@@ -1,4 +1,4 @@
-module contador_condicional_sincrono (
+module contador_condicional (
     input clk, rst,
     output reg [3:0] XYZW
 );
