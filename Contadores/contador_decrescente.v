@@ -1,4 +1,4 @@
-module contador_aritimetico_decrescente_sincrono (
+module contador_decrescente (
     input clk, rst,
     output reg [3:0] XYZW
 );
