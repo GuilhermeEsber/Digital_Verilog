@@ -12,19 +12,19 @@ module contadores_top (
 	wire [3:0] contagem_3;
 
 	// 2. Instanciação dos 3 Contadores
-	contador_condicional_sincrono cnt1 (
+	contador_condicional cnt1 (
 		.clk(clk),
 		.rst(rst),
 		.XYZW(contagem_1)
 	);
 
-	contador_aritimetico_crescente_sincrono cnt2 (
+	contador_crescente cnt2 (
 		.clk(clk),
 		.rst(rst),
 		.XYZW(contagem_2)
 	);
 
-	contador_aritimetico_decrescente_sincrono cnt3 (
+	contador_decrescente cnt3 (
 		.clk(clk),
 		.rst(rst),
 		.XYZW(contagem_3)
