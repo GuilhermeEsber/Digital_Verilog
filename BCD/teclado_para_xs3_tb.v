@@ -1,3 +1,5 @@
+`timescale 1ns / 100ps
+
 module teclado_para_xs3_tb;
     reg  [9:0] in;
     wire [3:0] out;
