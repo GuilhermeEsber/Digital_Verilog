@@ -1,4 +1,5 @@
-	`timescale 1ns / 100ps
+`timescale 1ns / 100ps
+
 module mux4x1_tb;
 
     reg [3:0] d;
