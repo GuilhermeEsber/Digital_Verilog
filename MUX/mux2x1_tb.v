@@ -1,3 +1,5 @@
+`timescale 1ns / 100ps
+
 module mux2x1_tb();
 
     reg  [1:0] d;
