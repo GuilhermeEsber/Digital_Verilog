@@ -1,33 +1,58 @@
-module detector_sequencia_11001 (clk, input_bit, rst, output_bit);
-    input wire clk, input_bit, rst;
-    output reg output_bit;
-    reg [2:0] state;
-    localparam S0 = 3'd0, S1 = 3'd1, S2 = 3'd2, S3 = 3'd3, S4 = 3'd4;
 
-    always @(*) begin
-        case (state)
-            S0, S1, S2, S3: output_bit = 1'b0;
-            S4:             if (input_bit) output_bit = 1'b1; else output_bit = 1'b0;
-            default:        output_bit = 1'b0;
-        endcase
-    end
+module detector_sequencia_11001 (
+    input  wire clk,
+    input  wire rst,
+    input  wire input_bit,
+    output reg  output_bit
+);
 
-    always @(posedge clk, negedge rst) begin
+    localparam [2:0] S0 = 3'd0,
+                     S1 = 3'd1,
+                     S2 = 3'd2,
+                     S3 = 3'd3,
+                     S4 = 3'd4;
+
+    reg [2:0] state, next_state;
+
+    always @(posedge clk or negedge rst) begin
         if (!rst)
             state <= S0;
         else
-            case (state)
-                S0:      if (input_bit) state <= S1;
-                         else           state <= S0;
-                S1:      if (input_bit) state <= S2;
-                         else           state <= S0;
-                S2:      if (input_bit) state <= S2;
-                         else           state <= S3;
-                S3:      if (input_bit) state <= S1;
-                         else           state <= S4;
-                S4:      if (input_bit) state <= S1;
-                         else           state <= S0;
-                default: state <= S0;
-            endcase
+            state <= next_state;
     end
+
+    always @(*) begin
+        next_state = S0;
+        output_bit = 1'b0;
+
+        case (state)
+
+            S0: begin
+                next_state = input_bit ? S1 : S0;
+            end
+
+            S1: begin
+                next_state = input_bit ? S2 : S0;
+            end
+
+            S2: begin
+                next_state = input_bit ? S2 : S3;
+            end
+
+            S3: begin
+                next_state = input_bit ? S1 : S4;
+            end
+
+            S4: begin
+                output_bit = input_bit ? 1'b1 : 1'b0;
+                next_state = input_bit ? S1 : S0;
+            end
+
+            default: begin
+                next_state = S0;
+            end
+
+        endcase
+    end
+
 endmodule
