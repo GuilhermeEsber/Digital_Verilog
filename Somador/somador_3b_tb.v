@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ns/100ps
 
 module somador_3b_tb;
     reg [2:0] A, B;    // Entradas de 3 bits
