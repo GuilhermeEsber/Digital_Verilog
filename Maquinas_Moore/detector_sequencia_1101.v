@@ -1,4 +1,3 @@
-
 module detector_sequencia_1101 (
     input  wire clk,
     input  wire rst,
