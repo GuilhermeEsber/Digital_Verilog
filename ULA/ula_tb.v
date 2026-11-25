@@ -1,4 +1,5 @@
 `timescale 1ns/100ps
+
 module ula_tb();
     // Declare aqui os sinais envolvidos na simulacao
     reg [2:0] A;
