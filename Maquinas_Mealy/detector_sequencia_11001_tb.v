@@ -1,3 +1,5 @@
+`timescale 1ns / 100ps
+
 module detector_sequencia_11001_tb;
 
     reg clk;
