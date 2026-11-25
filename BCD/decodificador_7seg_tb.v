@@ -1,4 +1,4 @@
-`timescale 1ns / 100ps
+`timescale 1ns/100ps
 
 module decodificador_7seg_tb;
 
