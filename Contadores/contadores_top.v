@@ -33,17 +33,17 @@ module contadores_top (
 	// 3. Instanciação dos Decodificadores de 7 Segmentos
 	decodificador_7seg dec1 (
 		.DCBA(contagem_1), 
-		.abcdefg(hex0)
+		.gfedcba(hex0)
 	);
 
 	decodificador_7seg dec2 (
 		.DCBA(contagem_2), 
-		.abcdefg(hex1)
+		.gfedcba(hex1)
 	);
 
 	decodificador_7seg dec3 (
 		.DCBA(contagem_3), 
-		.abcdefg(hex2)
+		.gfedcba(hex2)
 	);
 
 endmodule
