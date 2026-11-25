@@ -1,3 +1,4 @@
+`timescale 1ns / 100ps
 
 module detector_sequencia_1101_tb;
 
