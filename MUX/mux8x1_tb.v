@@ -1,3 +1,5 @@
+`timescale 1ns / 100ps
+
 module mux8x1_tb();
     reg [7:0] d;         // 8-bit data input
     reg [2:0] sel;       // 3-bit select input
